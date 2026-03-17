@@ -1,5 +1,6 @@
 // Footer.jsx — Rodapé com logo, links e copyright.
 
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const LeafIcon = () => (
@@ -21,10 +22,18 @@ const footerLinks = {
   ],
   Legal: [
     { label: 'Termos de Uso', href: '#' },
-    { label: 'Privacidade', href: '#' },
+    { label: 'Privacidade', href: '/politica-de-privacidade' },
     { label: 'Cookies', href: '#' },
   ],
 };
+
+// Renderiza como Link (react-router) para rotas internas, ou <a> para externas/âncoras
+function FooterLink({ href, label }) {
+  if (href.startsWith('/')) {
+    return <Link to={href} className="footer__link">{label}</Link>;
+  }
+  return <a href={href} className="footer__link">{label}</a>;
+}
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -59,9 +68,7 @@ export default function Footer() {
               <h3 className="footer__col-title">{col}</h3>
               <nav className="footer__links" aria-label={`Links de ${col}`}>
                 {links.map((link) => (
-                  <a key={link.label} href={link.href} className="footer__link">
-                    {link.label}
-                  </a>
+                  <FooterLink key={link.label} href={link.href} label={link.label} />
                 ))}
               </nav>
             </div>
