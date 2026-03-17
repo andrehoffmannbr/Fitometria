@@ -1,0 +1,12 @@
+/* ---- App.css ---- */
+/* Estilos específicos do wrapper principal da App. */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main#main-content {
+  flex: 1;
+}

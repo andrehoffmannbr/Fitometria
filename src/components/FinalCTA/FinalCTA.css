@@ -1,0 +1,102 @@
+/* ---- FinalCTA.css ---- */
+
+.final-cta {
+  background: var(--clr-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(16,185,129,0.15) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.final-cta__box {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: var(--space-16) var(--space-8);
+  background: linear-gradient(135deg, rgba(16,185,129,0.08) 0%, rgba(5,150,105,0.04) 100%);
+  border: 1px solid rgba(16,185,129,0.2);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+/* Decoração de bordas */
+.final-cta__box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--gradient-brand);
+}
+
+.final-cta__emoji {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: var(--space-4);
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+.final-cta__headline {
+  font-size: clamp(var(--fs-3xl), 4vw, var(--fs-5xl));
+  font-weight: var(--fw-extrabold);
+  color: var(--clr-text);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.03em;
+}
+
+.final-cta__desc {
+  font-size: clamp(var(--fs-base), 2vw, var(--fs-lg));
+  color: var(--clr-text-muted);
+  margin-bottom: var(--space-8);
+  max-width: 520px;
+  margin-inline: auto;
+  line-height: var(--lh-relaxed);
+}
+
+.final-cta__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+@media (min-width: 480px) {
+  .final-cta__buttons { flex-direction: row; justify-content: center; }
+}
+
+.final-cta__trust-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-6);
+}
+
+.final-cta__trust-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  color: var(--clr-text-subtle);
+}
+
+.final-cta__trust-item svg {
+  color: var(--clr-primary-500);
+  flex-shrink: 0;
+}
