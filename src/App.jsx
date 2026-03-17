@@ -14,7 +14,6 @@ import Benefits     from './components/Benefits/Benefits';
 import HowItWorks   from './components/HowItWorks/HowItWorks';
 import Features     from './components/Features/Features';
 import FinalCTA     from './components/FinalCTA/FinalCTA';
-import FAQ          from './components/FAQ/FAQ';
 import Footer       from './components/Footer/Footer';
 
 function App() {
@@ -61,9 +60,6 @@ function App() {
 
         {/* 6. CTA Final — conversão */}
         <FinalCTA />
-
-        {/* 7. FAQ — dúvidas frequentes */}
-        <FAQ />
       </main>
 
       {/* Footer */}

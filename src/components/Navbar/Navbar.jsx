@@ -47,7 +47,6 @@ const navLinks = [
   { label: 'Benefícios', href: '#beneficios' },
   { label: 'Como Funciona', href: '#como-funciona' },
   { label: 'Funcionalidades', href: '#funcionalidades' },
-  { label: 'FAQ', href: '#faq' },
 ];
 
 export default function Navbar({ theme, onToggleTheme }) {
