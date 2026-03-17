@@ -20,6 +20,9 @@ import Footer     from './components/Footer/Footer';
 // Páginas adicionais
 import PoliticaPrivacidade from './pages/PoliticaPrivacidade/PoliticaPrivacidade';
 
+// Banner LGPD
+import CookieBanner from './components/CookieBanner/CookieBanner';
+
 // ---- Landing page completa ----
 function LandingPage({ theme, onToggleTheme }) {
   useScrollAnimation();
@@ -58,16 +61,21 @@ function App() {
   const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
 
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={<LandingPage theme={theme} onToggleTheme={toggleTheme} />}
-      />
-      <Route
-        path="/politica-de-privacidade"
-        element={<PoliticaPrivacidade theme={theme} onToggleTheme={toggleTheme} />}
-      />
-    </Routes>
+    <>
+      <Routes>
+        <Route
+          path="/"
+          element={<LandingPage theme={theme} onToggleTheme={toggleTheme} />}
+        />
+        <Route
+          path="/politica-de-privacidade"
+          element={<PoliticaPrivacidade theme={theme} onToggleTheme={toggleTheme} />}
+        />
+      </Routes>
+
+      {/* Banner LGPD — aparece só na primeira visita, em todas as páginas */}
+      <CookieBanner />
+    </>
   );
 }
 

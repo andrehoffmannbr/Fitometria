@@ -1,0 +1,141 @@
+/* ---- CookieBanner.css ---- */
+
+.cookie-banner {
+  position: fixed;
+  bottom: var(--space-5);
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  z-index: 9999;
+  width: calc(100% - var(--space-8));
+  max-width: 680px;
+
+  background: var(--clr-bg-card);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255,255,255,0.04);
+
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+
+  /* Entrada animada */
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              opacity  0.35s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Visível */
+.cookie-banner.is-visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Saída */
+.cookie-banner.is-hiding {
+  transform: translateX(-50%) translateY(130%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ---- ÍCONE ---- */
+.cookie-banner__icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* ---- TEXTO ---- */
+.cookie-banner__text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.cookie-banner__title {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-text);
+  margin-bottom: var(--space-1);
+  font-family: var(--font-heading);
+}
+
+.cookie-banner__desc {
+  font-size: var(--fs-xs);
+  color: var(--clr-text-subtle);
+  line-height: var(--lh-relaxed);
+  margin: 0;
+}
+
+.cookie-banner__desc a {
+  color: var(--clr-primary-400);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cookie-banner__desc a:hover {
+  color: var(--clr-primary-300);
+}
+
+/* ---- BOTÕES ---- */
+.cookie-banner__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.cookie-banner__btn {
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+  min-height: 38px;
+  line-height: 1;
+  border: none;
+}
+
+/* Aceitar — destaque */
+.cookie-banner__btn--accept {
+  background: var(--gradient-brand);
+  color: #fff;
+  box-shadow: var(--shadow-glow-sm);
+}
+
+.cookie-banner__btn--accept:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Recusar — discreto */
+.cookie-banner__btn--decline {
+  background: transparent;
+  color: var(--clr-text-subtle);
+  border: 1.5px solid var(--clr-border-light);
+}
+
+.cookie-banner__btn--decline:hover {
+  border-color: var(--clr-text-subtle);
+  color: var(--clr-text-muted);
+}
+
+/* Responsivo mobile */
+@media (max-width: 540px) {
+  .cookie-banner {
+    bottom: var(--space-3);
+    padding: var(--space-4) var(--space-5);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  .cookie-banner__actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
