@@ -93,7 +93,7 @@ export default function FAQ() {
           <p style={{ color: 'var(--clr-text-muted)', marginBottom: 'var(--space-4)' }}>
             Ainda tem dúvidas?
           </p>
-          <a href="mailto:suporte@fitometria.app" className="btn btn-secondary">
+          <a href="mailto:suporte@fitometria.com.br" className="btn btn-secondary">
             Falar com o suporte
           </a>
         </div>

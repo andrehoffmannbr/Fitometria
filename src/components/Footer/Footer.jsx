@@ -16,7 +16,7 @@ const footerLinks = {
   ],
   Suporte: [
     { label: 'Central de Ajuda', href: '#' },
-    { label: 'Contato', href: 'mailto:suporte@fitometria.app' },
+    { label: 'Contato', href: 'mailto:suporte@fitometria.com.br' },
     { label: 'Status do Sistema', href: '#' },
     { label: 'Comunidade', href: '#' },
   ],

@@ -367,7 +367,7 @@ export default function PoliticaPrivacidade({ theme, onToggleTheme }) {
                   </ul>
                   <p>
                     Para exercer qualquer direito, envie e-mail para:{' '}
-                    <a href="mailto:suporte@fitometria.app">suporte@fitometria.app</a>
+                    <a href="mailto:suporte@fitometria.com.br">suporte@fitometria.com.br</a>
                   </p>
                 </div>
               </section>
@@ -413,7 +413,7 @@ export default function PoliticaPrivacidade({ theme, onToggleTheme }) {
                 <div className="policy-section__body">
                   <p>
                     Dúvidas sobre esta Política de Privacidade?<br />
-                    E-mail: <a href="mailto:suporte@fitometria.app">suporte@fitometria.app</a><br />
+                    E-mail: <a href="mailto:suporte@fitometria.com.br">suporte@fitometria.com.br</a><br />
                     Desenvolvedor: Fitometria
                   </p>
                   <p>Obrigado por usar o Fitometria de forma responsável.</p>

@@ -497,7 +497,7 @@ export default function TermosDeUso({ theme, onToggleTheme }) {
                   </p>
                   <p>
                     Dúvidas ou questões sobre estes Termos? Entre em contato:{' '}
-                    <a href="mailto:suporte@fitometria.app">suporte@fitometria.app</a>
+                    <a href="mailto:suporte@fitometria.com.br">suporte@fitometria.com.br</a>
                   </p>
                 </div>
               </section>
