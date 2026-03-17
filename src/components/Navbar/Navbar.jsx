@@ -70,7 +70,7 @@ export default function Navbar({ theme, onToggleTheme }) {
             {/* Logo */}
             <a href="#" className="navbar__logo" aria-label="Fitometria — Início">
               <div className="navbar__logo-icon">
-                <LeafIcon />
+                <img src="/logo.png" alt="Fitometria" width="20" height="20" />
               </div>
               <span className="navbar__logo-text">
                 Fito<span>metria</span>
