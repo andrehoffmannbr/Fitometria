@@ -46,7 +46,7 @@ function LandingPage({ theme, onToggleTheme }) {
 // ---- App root ----
 function App() {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('fitometria-theme') || 'dark';
+    return localStorage.getItem('fitometria-theme') || 'light';
   });
 
   useEffect(() => {
