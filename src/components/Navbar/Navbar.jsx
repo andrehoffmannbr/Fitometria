@@ -47,7 +47,6 @@ const navLinks = [
   { label: 'Benefícios', href: '#beneficios' },
   { label: 'Como Funciona', href: '#como-funciona' },
   { label: 'Funcionalidades', href: '#funcionalidades' },
-  { label: 'Depoimentos', href: '#depoimentos' },
   { label: 'FAQ', href: '#faq' },
 ];
 
