@@ -21,7 +21,7 @@ const footerLinks = {
     { label: 'Comunidade', href: '#' },
   ],
   Legal: [
-    { label: 'Termos de Uso', href: '#' },
+    { label: 'Termos de Uso', href: '/termos-de-uso' },
     { label: 'Privacidade', href: '/politica-de-privacidade' },
     { label: 'Cookies', href: '#' },
   ],

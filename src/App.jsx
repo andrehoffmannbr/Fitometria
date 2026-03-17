@@ -19,6 +19,7 @@ import Footer     from './components/Footer/Footer';
 
 // Páginas adicionais
 import PoliticaPrivacidade from './pages/PoliticaPrivacidade/PoliticaPrivacidade';
+import TermosDeUso         from './pages/TermosDeUso/TermosDeUso';
 
 // Banner LGPD
 import CookieBanner from './components/CookieBanner/CookieBanner';
@@ -70,6 +71,10 @@ function App() {
         <Route
           path="/politica-de-privacidade"
           element={<PoliticaPrivacidade theme={theme} onToggleTheme={toggleTheme} />}
+        />
+        <Route
+          path="/termos-de-uso"
+          element={<TermosDeUso theme={theme} onToggleTheme={toggleTheme} />}
         />
       </Routes>
 
