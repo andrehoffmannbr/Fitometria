@@ -13,7 +13,6 @@ import Hero         from './components/Hero/Hero';
 import Benefits     from './components/Benefits/Benefits';
 import HowItWorks   from './components/HowItWorks/HowItWorks';
 import Features     from './components/Features/Features';
-import SocialProof  from './components/SocialProof/SocialProof';
 import FinalCTA     from './components/FinalCTA/FinalCTA';
 import FAQ          from './components/FAQ/FAQ';
 import Footer       from './components/Footer/Footer';
@@ -59,9 +58,6 @@ function App() {
 
         {/* 4. Features — detalhes das funcionalidades */}
         <Features />
-
-        {/* 5. Prova Social — depoimentos e indicadores */}
-        <SocialProof />
 
         {/* 6. CTA Final — conversão */}
         <FinalCTA />
