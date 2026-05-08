@@ -75,12 +75,6 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        {/* CTA inline */}
-        <div className="section-header" style={{ marginTop: 'var(--space-12)', marginBottom: 0 }}>
-          <a href="#cta" className="btn btn-primary btn-lg animate-on-scroll">
-            Começar agora — grátis por 7 dias
-          </a>
-        </div>
       </div>
     </section>
   );

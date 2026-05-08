@@ -12,7 +12,7 @@ const benefits = [
   },
   {
     icon: '📊',
-    title: 'Dados organizados automaticamente',
+    title: 'Dados organizados',
     desc: 'pH, EC, temperatura e umidade sempre acessíveis e históriados.',
   },
   {
@@ -23,13 +23,13 @@ const benefits = [
   {
     icon: '🎯',
     title: 'Decisões baseadas em dados',
-    desc: 'VPD, indicadores ambientais e alertas para o momento certo agir.',
+    desc: 'VPD, cálculo automático com nossa ferramenta.',
     highlight: true,
   },
   {
     icon: '📅',
     title: 'Calendário inteligente',
-    desc: 'Linha do tempo visual com todas as atividades e eventos do ciclo.',
+    desc: 'alertas e menssagens para o proximo dia',
   },
   {
     icon: '📄',
@@ -39,7 +39,7 @@ const benefits = [
   {
     icon: '💧',
     title: 'Controle de rega e nutrição',
-    desc: 'Registre cada rega com valores de NPK, pH e EC em tempo real.',
+    desc: 'Registre cada rega com valores de NPK, aditivos e spray foliar em tempo real.',
   },
   {
     icon: '📦',

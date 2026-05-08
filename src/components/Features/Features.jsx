@@ -5,67 +5,11 @@ import './Features.css';
 /* ---- MOCKUP: Calendário Inteligente ---- */
 const CalendarMock = () => (
   <div className="feature-item__mock">
-    <div className="feature-mock__chrome">
-      <span className="feature-mock__dot" style={{ background: '#ef4444' }} />
-      <span className="feature-mock__dot" style={{ background: '#f59e0b' }} />
-      <span className="feature-mock__dot" style={{ background: '#22c55e' }} />
-    </div>
-    <div className="feature-mock__body">
-      <svg width="100%" viewBox="0 0 420 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {/* Header calendário */}
-        <rect x="0" y="0" width="420" height="36" rx="8" fill="rgba(16,185,129,0.08)"/>
-        <text x="16" y="24" fontFamily="Inter" fontSize="13" fill="#f1f5f9" fontWeight="600">Março 2026</text>
-        <text x="356" y="24" fontFamily="Inter" fontSize="18" fill="#10b981">‹ ›</text>
-
-        {/* Dias da semana */}
-        {['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'].map((d, i) => (
-          <text key={d} x={10 + i * 58} y={66} fontFamily="Inter" fontSize="11" fill="#64748b" fontWeight="600">{d}</text>
-        ))}
-
-        {/* Dias — linha 1 */}
-        {[1,2,3,4,5,6,7].map((d, i) => (
-          <g key={d}>
-            <rect x={2 + i * 58} y={76} width={54} height={44} rx="6"
-              fill={d === 3 ? 'rgba(16,185,129,0.15)' : 'rgba(255,255,255,0.03)'}
-              stroke={d === 3 ? 'rgba(16,185,129,0.5)' : 'transparent'}
-            />
-            <text x={18 + i * 58} y={102} fontFamily="Inter" fontSize="13"
-              fill={d === 3 ? '#10b981' : '#f1f5f9'} fontWeight={d === 3 ? '700' : '400'}>{d}</text>
-            {d === 3 && <circle cx={26 + i * 58} cy={112} r="3" fill="#10b981"/>}
-          </g>
-        ))}
-
-        {/* Dias — linha 2 com eventos */}
-        {[8,9,10,11,12,13,14].map((d, i) => (
-          <g key={d}>
-            <rect x={2 + i * 58} y={126} width={54} height={44} rx="6"
-              fill={d === 10 ? '#1e293b' : 'rgba(255,255,255,0.03)'}
-            />
-            <text x={18 + i * 58} y={152} fontFamily="Inter" fontSize="13" fill="#f1f5f9">{d}</text>
-            {d === 11 && <rect x={6 + i * 58} y={158} width={20} height={6} rx="3" fill="#3b82f6"/>}
-            {d === 13 && <rect x={6 + i * 58} y={158} width={20} height={6} rx="3" fill="#10b981"/>}
-          </g>
-        ))}
-
-        {/* Linha do tempo abaixo */}
-        <rect x="0" y="184" width="420" height="1" fill="rgba(255,255,255,0.06)"/>
-        <text x="0" y="206" fontFamily="Inter" fontSize="11" fill="#94a3b8" fontWeight="600">PRÓXIMAS ATIVIDADES</text>
-
-        {/* Event items */}
-        {[
-          { day: '17 Mar', label: 'Desfolha leve', color: '#10b981' },
-          { day: '19 Mar', label: 'Rega + EC 2.0', color: '#3b82f6' },
-          { day: '22 Mar', label: 'Poda apical', color: '#f59e0b' },
-        ].map((ev, i) => (
-          <g key={ev.label}>
-            <rect x={0} y={214 + i * 22} width={420} height={18} rx="4" fill="rgba(255,255,255,0.02)"/>
-            <rect x={0} y={215 + i * 22} width={3} height={16} rx="2" fill={ev.color}/>
-            <text x={12} y={227 + i * 22} fontFamily="Inter" fontSize="11" fill="#64748b">{ev.day}</text>
-            <text x={80} y={227 + i * 22} fontFamily="Inter" fontSize="11" fill="#f1f5f9">{ev.label}</text>
-          </g>
-        ))}
-      </svg>
-    </div>
+    <img
+      src="/calendario.jpeg"
+      alt="Tela de calendário do aplicativo Fitometria"
+      className="feature-mock__image"
+    />
   </div>
 );
 

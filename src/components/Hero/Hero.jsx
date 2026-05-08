@@ -148,9 +148,6 @@ export default function Hero() {
 
             {/* CTAs */}
             <div className="hero__ctas">
-              <a href="#cta" className="btn btn-primary btn-lg">
-                🌱 Testar grátis por 7 dias
-              </a>
               <a href="#como-funciona" className="btn btn-secondary btn-lg">
                 Como funciona?
               </a>
@@ -162,21 +159,6 @@ export default function Hero() {
               Sem cartão de crédito · Cancele quando quiser · Dados protegidos
             </div>
 
-            {/* Stats */}
-            <div className="hero__stats">
-              {[
-                { value: '10k+', suffix: '', label: 'Ciclos registrados' },
-                { value: '98', suffix: '%', label: 'Satisfação' },
-                { value: '4.9', suffix: '★', label: 'Avaliação média' },
-              ].map((stat, i) => (
-                <div key={i} className="hero__stat">
-                  <span className="hero__stat-value">
-                    {stat.value}<span>{stat.suffix}</span>
-                  </span>
-                  <span className="hero__stat-label">{stat.label}</span>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* ---- MOCKUP DIREITA ---- */}
