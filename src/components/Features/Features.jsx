@@ -16,103 +16,22 @@ const CalendarMock = () => (
 /* ---- MOCKUP: Fases do Cultivo ---- */
 const FasesMock = () => (
   <div className="feature-item__mock">
-    <div className="feature-mock__chrome">
-      <span className="feature-mock__dot" style={{ background: '#ef4444' }} />
-      <span className="feature-mock__dot" style={{ background: '#f59e0b' }} />
-      <span className="feature-mock__dot" style={{ background: '#22c55e' }} />
-    </div>
-    <div className="feature-mock__body">
-      <svg width="100%" viewBox="0 0 420 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <text x="0" y="20" fontFamily="Inter" fontSize="14" fill="#f1f5f9" fontWeight="700">Ciclo #3 — Lote Alpha</text>
-        <text x="0" y="38" fontFamily="Inter" fontSize="11" fill="#64748b">Iniciado em 01/02/2026 · Dia 42</text>
-
-        {/* Timeline de fases */}
-        {[
-          { label: 'Clones', days: '14d', color: '#6ee7b7', pct: 14, done: true },
-          { label: 'Vegetativo', days: '21d', color: '#10b981', pct: 21, done: true },
-          { label: 'Floração', days: '56d', color: '#f59e0b', pct: 42, current: true },
-          { label: 'Secagem', days: '14d', color: '#94a3b8', pct: 0, done: false },
-        ].map((fase, i) => (
-          <g key={fase.label}>
-            {/* Label */}
-            <text x={0} y={70 + i * 52} fontFamily="Inter" fontSize="12"
-              fill={fase.current ? '#f59e0b' : fase.done ? '#10b981' : '#64748b'}
-              fontWeight={fase.current ? '700' : '400'}
-            >
-              {fase.current ? '▶ ' : fase.done ? '✓ ' : '○ '}{fase.label}
-            </text>
-            <text x={380} y={70 + i * 52} fontFamily="Inter" fontSize="11" fill="#64748b" textAnchor="end">
-              {fase.days}
-            </text>
-
-            {/* Barra de progresso */}
-            <rect x={0} y={76 + i * 52} width={420} height={14} rx="7" fill="rgba(255,255,255,0.06)"/>
-            {fase.done && (
-              <rect x={0} y={76 + i * 52} width={420} height={14} rx="7" fill={fase.color} opacity="0.8"/>
-            )}
-            {fase.current && (
-              <>
-                <rect x={0} y={76 + i * 52} width={320} height={14} rx="7" fill={fase.color} opacity="0.7"/>
-                <circle cx={320} cy={83 + i * 52} r="8" fill={fase.color} stroke="#0f172a" strokeWidth="2"/>
-              </>
-            )}
-          </g>
-        ))}
-
-        {/* Legenda */}
-        <rect x="0" y="238" width="420" height="20" rx="4" fill="rgba(16,185,129,0.08)" stroke="rgba(16,185,129,0.2)" strokeWidth="1"/>
-        <text x="12" y="253" fontFamily="Inter" fontSize="11" fill="#10b981">📊 42 dias no cultivo · Floração em andamento · Prev. colheita: 25 Mai</text>
-      </svg>
-    </div>
+    <img
+      src="/cultivo.jpeg"
+      alt="Tela de fases do cultivo do aplicativo Fitometria"
+      className="feature-mock__image"
+    />
   </div>
 );
 
 /* ---- MOCKUP: Controle Ambiental ---- */
 const AmbientalMock = () => (
   <div className="feature-item__mock">
-    <div className="feature-mock__chrome">
-      <span className="feature-mock__dot" style={{ background: '#ef4444' }} />
-      <span className="feature-mock__dot" style={{ background: '#f59e0b' }} />
-      <span className="feature-mock__dot" style={{ background: '#22c55e' }} />
-    </div>
-    <div className="feature-mock__body">
-      <svg width="100%" viewBox="0 0 420 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <text x="0" y="18" fontFamily="Inter" fontSize="14" fill="#f1f5f9" fontWeight="700">Monitoramento Ambiental</text>
-
-        {/* Cards 2x2 */}
-        {[
-          { label: 'Temperatura', value: '24.5°C', sub: 'Ideal: 22–26°C', color: '#ef4444', ok: true },
-          { label: 'Umidade', value: '62%', sub: 'Ideal: 55–70%', color: '#3b82f6', ok: true },
-          { label: 'VPD', value: '1.2 kPa', sub: 'Ideal: 0.8–1.5', color: '#10b981', ok: true },
-          { label: 'CO₂', value: '800 ppm', sub: 'Ideal: 700–1000', color: '#a78bfa', ok: true },
-        ].map((item, i) => (
-          <g key={item.label}>
-            <rect
-              x={(i % 2) * 216} y={28 + Math.floor(i / 2) * 112}
-              width={204} height={100} rx="12"
-              fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)"
-            />
-            <circle cx={(i % 2) * 216 + 24} cy={28 + Math.floor(i / 2) * 112 + 28} r="8" fill={item.color} opacity="0.8"/>
-            <text
-              x={(i % 2) * 216 + 14} y={28 + Math.floor(i / 2) * 112 + 22}
-              fontFamily="Inter" fontSize="11" fill="#94a3b8"
-            >{item.label}</text>
-            <text
-              x={(i % 2) * 216 + 14} y={28 + Math.floor(i / 2) * 112 + 58}
-              fontFamily="Inter" fontSize="22" fill="#f1f5f9" fontWeight="700"
-            >{item.value}</text>
-            <text
-              x={(i % 2) * 216 + 14} y={28 + Math.floor(i / 2) * 112 + 78}
-              fontFamily="Inter" fontSize="10" fill="#64748b"
-            >{item.sub}</text>
-            <text
-              x={(i % 2) * 216 + 14} y={28 + Math.floor(i / 2) * 112 + 96}
-              fontFamily="Inter" fontSize="10" fill="#10b981"
-            >✓ Normal</text>
-          </g>
-        ))}
-      </svg>
-    </div>
+    <img
+      src="/monitoramento.jpeg"
+      alt="Tela de monitoramento ambiental do aplicativo Fitometria"
+      className="feature-mock__image"
+    />
   </div>
 );
 
